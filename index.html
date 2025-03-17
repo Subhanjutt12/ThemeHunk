@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThemeHunk - Premium E-Commerce Template</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <h1>ThemeHunk</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#sale-section">Sale</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <div class="search-container">
+                        <form action="#" class="search-form">
+                            <input type="text" placeholder="Search products..." class="search-input">
+                            <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
+                    <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1920&auto=format&fit=crop'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+        <div class="container">
+            <div class="hero-content" style="position: relative; z-index: 1; color: white;">
+                <h2 style="animation: fadeInDown 1s ease-out;">Summer Collection 2025</h2>
+                <h1 style="animation: fadeInUp 1.2s ease-out;">New Arrivals</h1>
+                <p style="animation: fadeInLeft 1.4s ease-out;">Discover our latest collection with up to 40% off</p>
+                <a href="#products" class="btn" style="animation: fadeInRight 1.6s ease-out;">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Search Bar Styles */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .search-form {
+            display: flex;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 200px;
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            width: 220px;
+            border-color: #ff6b6b;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+        }
+        
+        .search-button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .search-button:hover {
+            color: #ff6b6b;
+        }
+        
+        @media (max-width: 768px) {
+            .search-container {
+                margin-right: 10px;
+            }
+            
+            .search-input {
+                width: 150px;
+            }
+            
+            .search-input:focus {
+                width: 170px;
+            }
+        }
+        
+        /* Sale Section Styles */
+        .sale-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .sale-banner {
+            margin-bottom: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .sale-content {
+            display: flex;
+            align-items: center;
+        }
+        
+        .sale-text {
+            flex: 1;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .sale-text h2 {
+            font-size: 36px;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        .sale-text h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .sale-text p {
+            margin-bottom: 25px;
+            color: #666;
+        }
+        
+        .sale-image {
+            flex: 1;
+            height: 400px;
+        }
+        
+        .sale-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            margin: 25px 0;
+        }
+        
+        .countdown-item {
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            padding: 15px 10px;
+            margin-right: 10px;
+            min-width: 70px;
+            text-align: center;
+        }
+        
+        .countdown-number {
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .countdown-label {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        
+        .sale-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .sale-product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .sale-product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .sale-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .sale-product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .sale-product-details {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .sale-product-details h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .sale-price {
+            margin-bottom: 15px;
+        }
+        
+        .current-price {
+            font-weight: bold;
+            font-size: 18px;
+            color: #ff6b6b;
+            margin-right: 10px;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+        
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .sale-content {
+                flex-direction: column;
+            }
+            
+            .sale-text, .sale-image {
+                width: 100%;
+            }
+            
+            .sale-products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .sale-products {
+                grid-template-columns: 1fr;
+            }
+            
+            .countdown-item {
+                min-width: 60px;
+                padding: 10px 5px;
+            }
+            
+            .countdown-number {
+                font-size: 20px;
+            }
+        }
+        
+        /* Featured Section Hover Effects */
+        .featured-large {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+        }
+        
+        .featured-large:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .featured-small-item {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+        }
+        
+        .featured-small-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .featured-large img, .featured-small-item img {
+            transition: transform 0.6s ease;
+        }
+        
+        .featured-large:hover img, .featured-small-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .featured-content .btn, .featured-content .btn-small {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .featured-content .btn:hover, .featured-content .btn-small:hover {
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 992px) {
+            .sale-content {
+                flex-direction: column;
+            }
+            
+            .sale-text, .sale-image {
+                width: 100%;
+            }
+            
+            .sale-products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-wrapper">
+                <div class="feature-box">
+                    <i class="fas fa-truck"></i>
+                    <h3>Free Shipping</h3>
+                    <p>On all orders over $50</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-undo"></i>
+                    <h3>Easy Returns</h3>
+                    <p>30 days return policy</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure checkout</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Shop By Categories</h2>
+                <p>Browse our top categories</p>
+            </div>
+            <div class="categories-wrapper">
+                <div class="category-box">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=300&h=400&auto=format&fit=crop" alt="Men's Fashion">
+                    <div class="category-content">
+                        <h3>Men's Fashion</h3>
+                        <a href="#" class="btn-small">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-box">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=300&h=400&auto=format&fit=crop" alt="Women's Fashion">
+                    <div class="category-content">
+                        <h3>Women's Fashion</h3>
+                        <a href="#" class="btn-small">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-box">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=300&h=400&auto=format&fit=crop" alt="Accessories">
+                    <div class="category-content">
+                        <h3>Accessories</h3>
+                        <a href="#" class="btn-small">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-box">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=300&h=400&auto=format&fit=crop" alt="Footwear">
+                    <div class="category-content">
+                        <h3>Footwear</h3>
+                        <a href="#" class="btn-small">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>Check out our latest products</p>
+            </div>
+            <div class="product-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="new">New Arrivals</button>
+                <button class="filter-btn" data-filter="featured">Featured</button>
+                <button class="filter-btn" data-filter="bestseller">Best Sellers</button>
+            </div>
+            <div class="products-wrapper">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="new">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=300&h=300&auto=format&fit=crop" alt="Product 1">
+                        <div class="product-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <span class="product-tag">New</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Casual T-Shirt</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$29.99</span>
+                            <span class="old-price">$39.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="featured">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1551537482-f2075a1d41f2?q=80&w=300&h=300&auto=format&fit=crop" alt="Product 2">
+                        <div class="product-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <span class="product-tag">-20%</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Denim Jacket</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$59.99</span>
+                            <span class="old-price">$79.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="bestseller">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=300&h=300&auto=format&fit=crop" alt="Product 3">
+                        <div class="product-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Leather Bag</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$89.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="new">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=300&h=300&auto=format&fit=crop" alt="Product 4">
+                        <div class="product-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <span class="product-tag">New</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Running Shoes</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(3.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$119.99</span>
+                            <span class="old-price">$149.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="featured">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=300&h=300&auto=format&fit=crop" alt="Product 5">
+                        <div class="product-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Smart Watch</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$199.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="bestseller">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=300&h=300&auto=format&fit=crop" alt="Product 6">
+                        <div class="product-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <span class="product-tag">-15%</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Wireless Headphones</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$129.99</span>
+                            <span class="old-price">$149.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="new">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=300&h=300&auto=format&fit=crop" alt="Product 7">
+                        <div class="product-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <span class="product-tag">New</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Sunglasses</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$49.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="bestseller">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=300&h=300&auto=format&fit=crop" alt="Product 8">
+                        <div class="product-overlay">
+                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="overlay-btn"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Backpack</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(3.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$69.99</span>
+                            <span class="old-price">$89.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more">
+                <button class="btn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sale Section -->
+    <section class="sale-section" id="sale-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flash Sale</h2>
+                <p>Limited time offers - Hurry up!</p>
+            </div>
+            <div class="sale-banner">
+                <div class="sale-content">
+                    <div class="sale-text">
+                        <h2>Summer Sale</h2>
+                        <h3>Up to 70% Off</h3>
+                        <p>Limited time offer on selected items</p>
+                        <div class="countdown-timer">
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="days">02</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="hours">18</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="minutes">45</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="seconds">30</span>
+                                <span class="countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">Shop Now</a>
+                    </div>
+                    <div class="sale-image">
+                        <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?q=80&w=600&h=400&auto=format&fit=crop" alt="Sale Banner">
+                    </div>
+                </div>
+            </div>
+            <div class="sale-products">
+                <div class="sale-product-card">
+                    <div class="sale-badge">-40%</div>
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=250&h=250&auto=format&fit=crop" alt="Sale Product 1">
+                    <div class="sale-product-details">
+                        <h3>Premium Hoodie</h3>
+                        <div class="sale-price">
+                            <span class="current-price">$39.99</span>
+                            <span class="old-price">$69.99</span>
+                        </div>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="sale-product-card">
+                    <div class="sale-badge">-50%</div>
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=250&h=250&auto=format&fit=crop" alt="Sale Product 2">
+                    <div class="sale-product-details">
+                        <h3>Designer Bag</h3>
+                        <div class="sale-price">
+                            <span class="current-price">$49.99</span>
+                            <span class="old-price">$99.99</span>
+                        </div>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="sale-product-card">
+                    <div class="sale-badge">-30%</div>
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=250&h=250&auto=format&fit=crop" alt="Sale Product 3">
+                    <div class="sale-product-details">
+                        <h3>Casual Sneakers</h3>
+                        <div class="sale-price">
+                            <span class="current-price">$59.99</span>
+                            <span class="old-price">$89.99</span>
+                        </div>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="sale-product-card">
+                    <div class="sale-badge">-60%</div>
+                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=250&h=250&auto=format&fit=crop" alt="Sale Product 4">
+                    <div class="sale-product-details">
+                        <h3>Smart Watch</h3>
+                        <div class="sale-price">
+                            <span class="current-price">$79.99</span>
+                            <span class="old-price">$199.99</span>
+                        </div>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Our handpicked collection</p>
+            </div>
+            <div class="featured-wrapper">
+                <div class="featured-large" style="animation: fadeIn 1.2s ease-out;">
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=600&h=400&auto=format&fit=crop" alt="Featured Large">
+                    <div class="featured-content">
+                        <h3 style="animation: slideInLeft 1s ease-out;">Premium Collection</h3>
+                        <p style="animation: slideInLeft 1.2s ease-out;">Exclusive designs for the modern lifestyle</p>
+                        <a href="#" class="btn" style="animation: fadeInUp 1.4s ease-out;">Shop Now</a>
+                    </div>
+                </div>
+                <div class="featured-small">
+                    <div class="featured-small-item" style="animation: fadeIn 1.4s ease-out;">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=300&h=200&auto=format&fit=crop" alt="Featured Small 1">
+                        <div class="featured-content">
+                            <h3 style="animation: slideInRight 1.2s ease-out;">Summer Essentials</h3>
+                            <p style="animation: slideInRight 1.4s ease-out;">Up to 40% off</p>
+                            <a href="#" class="btn-small" style="animation: fadeInUp 1.6s ease-out;">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="featured-small-item" style="animation: fadeIn 1.6s ease-out;">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=300&h=200&auto=format&fit=crop" alt="Featured Small 2">
+                        <div class="featured-content">
+                            <h3 style="animation: slideInRight 1.4s ease-out;">New Season</h3>
+                            <p style="animation: slideInRight 1.6s ease-out;">Check out the latest trends</p>
+                            <a href="#" class="btn-small" style="animation: fadeInUp 1.8s ease-out;">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Trusted by thousands of customers worldwide</p>
+            </div>
+            <div class="testimonials-wrapper">
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&h=100&auto=format&fit=crop" alt="Customer 1">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"I absolutely love the quality of the products. The customer service is exceptional and delivery was faster than expected!"</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>John Doe</h4>
+                        <span>Regular Customer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&h=100&auto=format&fit=crop" alt="Customer 2">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The variety of products is amazing. I've been shopping here for years and have never been disappointed. Highly recommended!"</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h4>Jane Smith</h4>
+                        <span>Loyal Customer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&h=100&auto=format&fit=crop" alt="Customer 3">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The return process was so easy and hassle-free. The team was very helpful and responsive. Will definitely shop again!"</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Mike Johnson</h4>
+                        <span>New Customer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Learn more about our story and mission</p>
+            </div>
+            <div class="about-wrapper">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1577401239170-897942555fb3?q=80&w=600&h=400&auto=format&fit=crop" alt="About Us">
+                </div>
+                <div class="about-content">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2010, ThemeHunk has grown from a small startup to one of the leading e-commerce platforms in the industry. Our journey began with a simple mission: to provide high-quality products at affordable prices with exceptional customer service.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>We strive to create a seamless shopping experience for our customers by offering a wide range of products, competitive prices, and outstanding customer support. Our goal is to exceed customer expectations in every interaction.</p>
+                    
+                    <h3>Why Choose Us?</h3>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Quality products sourced from trusted suppliers</li>
+                        <li><i class="fas fa-check"></i> Competitive pricing and regular discounts</li>
+                        <li><i class="fas fa-check"></i> Fast shipping and easy returns</li>
+                        <li><i class="fas fa-check"></i> Dedicated customer support team</li>
+                        <li><i class="fas fa-check"></i> Secure payment options</li>
+                    </ul>
+                    
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <h4>10+</h4>
+                            <p>Years of Experience</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4>50k+</h4>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4>5k+</h4>
+                            <p>Products</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4>100+</h4>
+                            <p>Team Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Our Location</h3>
+                        <p>123 Main Street, New York, NY 10001, United States</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone Number</h3>
+                        <p>+1 (555) 123-4567</p>
+                        <p>+1 (555) 987-6543</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Address</h3>
+                        <p>info@themehunk.com</p>
+                        <p>support@themehunk.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Working Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059445135!2d-74.25986613799748!3d40.69714941774136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1647134422077!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Get the latest updates, offers and special announcements delivered directly to your inbox.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h2>ThemeHunk</h2>
+                    </div>
+                    <p>Premium e-commerce solutions for your business. Quality products at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, New York, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@themehunk.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 ThemeHunk. All Rights Reserved.</p>
+                </div>
+                <div class="payment-methods">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAABvFBMVEXj6Ov///8iO34BZ7E2SF75+fnn7Oy0trjo6/CEh4bFx8aws7QAbs/k5+yvs7Lp7/Dj5OH5nhoBbdAAZszhHSGIstgiOoCapK2wuM7h6ugFKnk4R18DZK8PLXoAXrCTobmLr8ymxOGwu8MmOVKRm6Wnw9Y7ToEXMXMAV6LD3u4jOYNXjL0gOE3V5vEAXsL///oAZsMAYMDw///i6PYAW8k2SVbM6fQAVrIAVbk6gcwAaK7uYyPgHSZsnMaAqtoAVqcAAF7f8vidnZ3L1efBytTB2PFIWYcAIGxUZ5UdZ5qw2fAxP1JYj8ojN25QibQAT5t3iK4mTGVHQVNVP0wVQ2U8SUhOUkooP1mRMTvCKSzTIyNUSUucdjbdljXwojKygy1YUzbxFyGdbDagLT3vQyHyfR/LlTo/PkYAetcpc8IARKlcmcwAVcGg1PNPm9yIv+l+NEf1hx9ysuLOsW21pXI3eq+7Jjb0USaBiakAHXQAW4/DtZb6pyIAWpz1ZCaNbjkAAEf/9c5jeXwAQZZTkbkbLGSJing/SXVvn76ct89QXZMyfrllO0xGWWOvKTW/jjtmU0RwOEl3YkR/h5UnNStGAAANxElEQVR4nO2djV/aZh7AeRQyboOGiqEgAUWHEGwIROWton2KVqSp1daOrre6c73bTLH1rnfe6p32btdup7XXvf3D9zxJeFVo4lO6232erzSBByLJ19/z/mSzAQoBtl/6BH7dYH0OyrnQ9TmufUA5B9ccur4PGCfFOh+wmj7PBdZGsYbbZmM+8lB954TqIwLpY6m+c0P1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EUH1EWFZX8AzbQvg/3QTE0DY0E/3XSDA2Nxu7ahA43iUrh1qBgZ9j40JuD36odovc5u+tkDzW/XzZcyCvsTTevC704dOBP1u/BU2c2fCeNBl24xzcetCTBLwtBlwt/4ZEGyPHZLOdLhkPKb1oY8af/c+6GNYZ8lvnhJsXAnSyLBi1CyRqAAZpn4dbifDsovjpll0t14P42GXIuYRWE9f9KG/PyteXw6FRsyyXBaZhr8APIqH6/Dop/cuvlJhmfp1BNjxGxMWuHFJbvmbL+XTXvOkFZE5de3vQB86k+mbIwMY39vBHxoITU438hxcjYd5fhA9TFAY5MO3KlpRhHFeuhy0awRNYb/8ceOKGCHt3XYNmcXlmsnD/uhj10KJAd+AblB/0mOHHCZCo4Y+xvN4wZS4JvweWy84nTfsFpkQ66HL1rwuF7JiGm9610T4nUOfc9KXGLCCL1FmjatgimGr+g5Fp/HFixMo7qzpu1T/YlH1WrKHUEzosK7PPR2zqG8gMVm/CnbKsr64YBzrHLesr/pxQ19qyOW1ZG8o3xd9tulYwmdVn7Opz5o9rI/Rcy87fplEn7W82099Fu019TFIX8Giv7jgcZvRd9Y7bdFnMe+6+qPPg/RZ9OebNIovpI+3qE+LPltDn6EKu1pft9++c+c23turG5fvfvLJV9WNjWow2KbP6KaIKe9MMulNJpNp7ZFMziS1bVp7oqXgvTc9o39kqF/63JbLvjZ9FoMP6wuc0od+Zu/c+/T+3PD9T+/dWa/+9rMHmwcXNx98/ruN4OyZ+nKcmMkUK5mMyHEieprB//BWFNDmcSSjo6CksQh67wnOvO63ddx+nfrswfXZe/e3toYRW1v3732xedHg4LPZ6pn6wrIYFW2yEI2yMBItOaLRSkRkUdemIksRVpIr0ZIkRGEACFHZIUbBvPf/WJ999uHcsCZvGO1//4eLDQ6+/Kp6lr55OT+TB9LUdlaGue0izKl5dayyo+azivhIyISTqaKcnqkBkN/hQFF9H/r0fkWHqtYkn0V9Z3RGztY3+3BYCz2N31+50urv+xtn6HPDSvZxTpBqT/KVSP5JDWYrsiwvLUCwGxZyGUWFKAgHd3MQ5NWsyL0PfbFXr65P6q2YBErSumgD119dv7msv58YuN5dX2EFUcDdt8LhYLhwyPPheOEE73k+fniI3hgsdNW3/sfh4VZ7V678qenv4hfV2WCnPpukKEBVgKJw8zWuVoPecDg7tpRWlPBUZkfIP5UkSeVAlgPq07zydBsUU33WFyvj/9FHSfPn07tovpAfJUn+kA+/jPlB2ddN38p3f97c/AuyxcnyyzEgn8T3BBkAuMLzL6EM+UIvffa/NmNv+Gus70qLvgd3q3ZdYEOf25OZcampNKwpwnZKUGow91gU4VLuafiJ7N4RFJSvl3ZcalqVVS6TdeX7H32hZ2DxmUNa24+NhEI+9BhIhPYXweioBCZRSii0XAKTXaMvzP/t7wcHK2FelORbFclR2JMlIEvyYfgwIwGwxw/20Pe6KW9u+PmVjvA7+MdGpz6breaqLFV2OBSD2SGQr8GkUqxFhBysPIqgsm8pqyKFS0Ik+1idl+ZnVFDst77lcVD+pwjKa4ulZ4vlUX9sBO1sjuWrDhAbLflRgtO53FUfyqzcN5v/Cu8BKfIiI8GFqAT24oWXPE5xSEcLur2z9d3bmhuea8277bn3+6rRiG6pOooVSQQcF+EkjpPGjtl5RFSssVLkKFMUpQwHiwL6xHyEi0jyPPce9ImSvyS5fwbORQDKKKMOOOBNh8M/LY2PA1GUwLdgsbs+lDn3wDffZY8BOFmQJQHrix6GUcFXkQRRii7gT3TT97Az7z5vrTwuPrh8Sp8bSpUXGVmHlZtParLskOWMgF45dh9BnFrBL2p9Lvt8MVZyOEr/djpjVxfBQBlcKoHyJAAO1n8dLF5dZtmbwB/qoY+PQ+nDFxAIt1YAOA6vokITvlwIF2TpKCrBW71q3jcd+p5fed6mb+JU1SHyasqbUlPbqrqNflA5uL2dUhEpF0pLuZIplJTyqi70AS/aqbjP+/YRq3Pr8/kmwfRybCQGpq/uO9lYjJWBf38N+Jdj+2XgvzoJSmXwbKRHw4WPRwFE0lbDLwE4Ci9MQSCBYnwMlX9FSe5Z9r3ZmmsUfWfpq7f8WjttqM+LHqkhr9b3RbtUy+CoC73ZNiIz1Lc+b11fGeVN38CyG7idwL2/7wfi8sglMLqfSAwACf0+/ygod4++wUKBPwKyAOBCeAxVFWE+fIsDknALSuLRsaTVHT3LvtZ2y/O2lt/F7zdm7cFT+lxYn2tI69Eikl70T38k0ymUmtaT0Qu8S6X7rO+Vfy2BGsmTflRvrIWQxleh2Jr/le+mb6Ts96/5y2t+o918ZtWBgqsAUGtrLI5KOzl+snLrxQoqA6dQGsrG0lgvfa9bMu+wZq+t6vhsY/ZU1aHpQ0H3VNYKO9QxK0DtqQM6WLTFaTLAbwEHLhMdsrOrgnehD7VctKEXXyyWSIyM+MHoSAI1XVASakHjhksiEUp014cFosJPkgt8XJTgC5SRRdR0WRUkWBEEKEXjPfTNtrf7nre3+zY/OaPmTRl5lgN4Iq0UjciyeCzi59CBtxlJm4hDHeJIJCoJeNtPfbidrHfQEjgGE2vPQnqFbMwP6e9111fA+qIARBf4uIyqjwpug8PiHkp5sYBlxsPd9a3f2zJKPpx7kb3nrc2+z9ftdn3c5VT0ubzzILedzx8Jj+blsCKgPm+qANOo/5uFSjKfP8moqpLnhBx6Wumrvs6+bo9hhK593sLeFKqBC1Or+TC/VyyuxsOF1VXcYDlZnTL6v11GXHDTZcto+33dXvJ9efc/9tM1b1Nf9jHOppHctiqLOxVQyQnhCMg8Emp5WYYwh8ISHCczUK6PtL4Xfb3oqg+1nXEfF/d88awuX2dQ2/TQt377DQ6+OT0Cv26zh7NuL33eZC6HKvyTGdSQTuYVVYWpvJIflJWZXO4FrO3sZBWoZneynAkZv/CAFX7FFwp8vTJubBtjL10GrOy3Hw7Xx/vmHn5+gPKsMd5yd12b4+0ZfRB1NrI4+pJP5jnoSD3Np6D05ARFnwSgvLuDQg8q6v/+aDMOtEKh9eVgx5hVN32zs68f3keRN3f/zWt79YfPNw+Qv80vf5pA3d3GeP3ZZV9eUcaE3LycVjKPliR5Wk5GZPVEUpKKMgWnlJqqiopSSz3phz7m3c51FLC8RvjVA1CLPb57py0YXLcH19dvvP7xx9c31teD9urGjR9++umHr6ob1WDLpFGrPq1l7PKiPm+E46KViAwynBCxweyUfIyqfk6s7HK7HORQvxja8Faz8ZaOh3V9jPWZNqwvYOizOtOG9Hk8xkzbRK95ymaWbdIxUYn1PYUsbu9BmNmDaMtWkgp6GalAiHIsCzEoGX8iamIt3HuZ5/W1TlRas9cWfT31nUX7NLkL99lSKWNODfU6krlk0js0lMplZ5LpnDHZlstpm9yOaqLqPd8qA2v6fG3T5NZXGRjT5M53oA83nOvdWq/WBda7u/WubwupfF/02Zw3B6xG3/X6mTjOoU+srzJYtKxv4hJrlLoiP9S2zECXNeTSBhDqL9oWGQz1R5+HXYsljLVnJhaoYXuhZ8ZvZphI3OI8OV9gmfrS1Alr8uzBiVK96IeK14izjqUYxnaoM9Wb2mX6En2BUixkKfhC34rN9X17RvjxbwePCQ7GI43Kj/348tuVNd0FqxM/t6zvy1lbouFV+7O+z+2WSze1ZaMhM4yMLE+WWGN5KePx4PWRZkE9kcNIc9AygPxNVE0zcblpD8c9b2Fxqdd7kunT6lJ3gJn2j5rHD5mWhdYedmnMPMci42k5V9Y9fsk8i21rmwMiau+ZZgky/RmwwuhL/E18kGGcjHZ/QXOdOjrQ5PfgQ9vP1cK9BQzTsTg+YPM4zR7pxLdC9GllvXaU06YX6Iy+6bozLDc0eGxWOH17gPm7OjoPdJu71UAH30LSP30UA6qPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPCKqPlKY+M3foUjpgP7LVo8/KzcYUHfaCEX3XLlz4iGKZa3r0MRd+QzkHFxhNn8PzIeUceByaPiSQcg6wuf8CiPW890SDCTAAAAAASUVORK5CYII=" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    
+    <!-- Countdown Timer Script -->
+    <script>
+        // Set the countdown date (3 days from now)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 3);
+        
+        // Update the countdown every second
+        const countdownTimer = setInterval(function() {
+            // Get current date and time
+            const now = new Date().getTime();
+            
+            // Find the distance between now and the countdown date
+            const distance = countdownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the result
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+            
+            // If the countdown is finished, display expired message
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
